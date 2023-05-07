@@ -1,6 +1,30 @@
-A demonstration of Docker to implement a simple 3 tier architecture
+# todo app
 
-* frontend will be able to access the mid-tier
-* mid-tier will be able to access the db
+in this demo you need to build a docker-compose file to start this web app
 
-In order to run this in docker, simply type ```docker-compose up``` at the command prompt. Docker will then create the [MongoDB](https://www.mongodb.com/) from the stock [mongo](https://hub.docker.com/_/mongo) image. The api uses [nodejs](https://nodejs.org/) with [express](http://expressjs.com/) and is built from a [node:alpine](https://hub.docker.com/_/node) image. The front end uses [ReactJS](https://reactjs.org/) and built from a [node:alpine](https://hub.docker.com/_/node) image.
+## front end 
+### react app application that you need to generate a dockerfile for
+### this react app run the 3000 th port 
+### use npm i to download all the packages 
+### the application depnds on the backend 
+
+## back end 
+### node app that you will extract as an image using docker file 
+### use npm i to download all the packages 
+### this react app run the 3001 th port 
+### the application depnds on the mongo db  
+
+## database:
+mongo data base 
+on port 27017
+enviroment variables:
+
+|  MONGODB_INITDB_ROOT_USERNAME  | MONGODB_INITDB_ROOT_PASSWORD |
+| ------------------------------ | ---------------------------- |
+| appocation                     | any_pass                     |
+
+you need to add volume to the db at - vol name :/data/db
+
+no need for connection string 
+use this command to test the compose :
+##docker-compose up -d  
