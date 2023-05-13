@@ -28,3 +28,4 @@ you need to add volume to the db at - vol name :/data/db
 no need for connection string 
 use this command to test the compose :
 ##docker-compose up -d  
+# docker_hw_1
