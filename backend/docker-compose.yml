@@ -1,0 +1,24 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - MONGODB_INITDB_ROOT_USERNAME=appocation
+      - MONGODB_INITDB_ROOT_PASSWORD=any_pass
+    depends_on:
+      - database
+  database:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - db-data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=appocation
+      - MONGO_INITDB_ROOT_PASSWORD=any_pass
+volumes:
+  db-data:
